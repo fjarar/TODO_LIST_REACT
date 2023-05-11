@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
+import '../../styles/task.scss';
 
 
 const TaskListComponent = () => {    
