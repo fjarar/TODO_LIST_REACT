@@ -6,6 +6,7 @@ import TaskListComponent from './components/container/task_list';
 import GreetingStyled from './components/pure/greetingStyled';
 import Clock from './components/pure/entregaClase';
 import EntregaFuncion from './components/pure/entregaFuncion';
+import Father from './components/container/father';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         {/* <GreetingStyled name="Flavio"></GreetingStyled> */}
         {/* <Clock></Clock> */}
         {/* <EntregaFuncion name='Martin' lastName={'San Jose'}></EntregaFuncion> */}
+        {/* GEestion de eventos */}
+        {/* <Father></Father> */}
       </header>
     </div>
   );
