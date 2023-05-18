@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Definiendo estilos en constantes
 
-// ? Estilo para usuari logueado
+// ? Estilo para usuario logueado
 const loggedStyle = {
   color: "white",
 };
