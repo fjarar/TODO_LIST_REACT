@@ -8,6 +8,7 @@ import Clock from './components/pure/entregaClase';
 import EntregaFuncion from './components/pure/entregaFuncion';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import SquareColorChange from './components/pure/squareColorChange';
 
 function App() {
   return (
@@ -18,12 +19,13 @@ function App() {
         {/* <GreetingF name={"Flavio"}></GreetingF> */}
         {/* <TaskListComponent></TaskListComponent> */}
         {/* Ejemplo de Renderizado Condicional */}
-        <OptionalRender></OptionalRender>
+        {/* <OptionalRender></OptionalRender> */}
         {/* <GreetingStyled name="Flavio"></GreetingStyled> */}
         {/* <Clock></Clock> */}
         {/* <EntregaFuncion name='Martin' lastName={'San Jose'}></EntregaFuncion> */}
         {/* GEestion de eventos */}
         {/* <Father></Father> */}
+        <SquareColorChange></SquareColorChange>
       </header>
     </div>
   );
