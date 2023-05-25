@@ -53,20 +53,60 @@ const TaskListComponent = () => {
     setTasks(tempTask);
   }
 
-  function deleteTask(task){
+  function deleteTask(task) {
     console.log("Delete this Task:", task);
     const index = tasks.indexOf(task);
     const tempTask = [...tasks];
-    tempTask.splice(index,1);
+    tempTask.splice(index, 1);
     setTasks(tempTask);
   }
 
-  function addTask(task){
+  function addTask(task) {
     console.log("Adding a Task:", task);
-    const index = tasks.indexOf(task);
     const tempTask = [...tasks];
     tempTask.push(task);
     setTasks(tempTask);
+  }
+
+  const Table = () => {
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* TODO: Iterar sobre una lista de tareas */}
+          {tasks.map((task, index) => {
+            return (
+              <TaskComponent
+                key={index}
+                task={task}
+                complete={completeTask}
+                remove={deleteTask}
+              ></TaskComponent>
+            );
+          })}
+        </tbody>
+      </table>
+    );
+  };
+
+  let tasksTable;
+
+  if(tasks.length > 0){
+    tasksTable = <Table></Table>;
+  }else{
+    tasksTable = (
+      <div>
+      <h3>There are no task to show</h3>
+      <h4>Please, create one</h4>
+    </div>
+    )   
   }
 
   return (
@@ -81,29 +121,8 @@ const TaskListComponent = () => {
             data-md-perfect-scrollbar="true"
             style={{ position: "relative", height: "400px" }}
           >
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Priority</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* TODO: Iterar sobre una lista de tareas */}
-                {tasks.map((task, index) => {
-                  return (
-                    <TaskComponent
-                      key={index}
-                      task={task}
-                      complete={completeTask}
-                      remove={deleteTask}
-                    ></TaskComponent>
-                  );
-                })}
-              </tbody>
-            </table>
+            
+            { tasksTable }
           </div>
         </div>
       </div>

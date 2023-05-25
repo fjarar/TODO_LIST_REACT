@@ -17,7 +17,7 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <Greeting name="Flavio"></Greeting> */}
         {/* <GreetingF name={"Flavio"}></GreetingF> */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         {/* Ejemplo de Renderizado Condicional */}
         {/* <OptionalRender></OptionalRender> */}
         {/* <GreetingStyled name="Flavio"></GreetingStyled> */}
@@ -25,7 +25,7 @@ function App() {
         {/* <EntregaFuncion name='Martin' lastName={'San Jose'}></EntregaFuncion> */}
         {/* GEestion de eventos */}
         {/* <Father></Father> */}
-        <SquareColorChange></SquareColorChange>
+        {/* <SquareColorChange></SquareColorChange> */}
       </header>
     </div>
   );
