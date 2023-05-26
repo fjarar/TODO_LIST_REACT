@@ -37,7 +37,9 @@ const TaskListComponent = () => {
   //COntrol del ciclo de vida del componente
   useEffect(() => {
     console.log("Task State has been modified");
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);    
     return () => {
       console.log("TaskList component is going to unmount...");
     };
@@ -109,24 +111,32 @@ const TaskListComponent = () => {
     )   
   }
 
+  const loadingStyle = {
+    color: 'grey',
+    fontSize: '30px',
+    fontWeight: 'bold'
+  }
+
   return (
     <div>
       <div className="col-12">
         <div className="card">
+        {/* Card HEader (title) */}
           <div className="card-header p-3">
             <h5>Your Tasks:</h5>
           </div>
+          {/* Card Body (content) */}
           <div
             className="card-body"
             data-md-perfect-scrollbar="true"
             style={{ position: "relative", height: "400px" }}
           >
-            
-            { tasksTable }
+            {/* TODO: Add Loading Spinner */}
+            { loading ? (<p style={loadingStyle}>Loading tasks...</p>) : tasksTable }
           </div>
         </div>
       </div>
-      <TaskForm add={addTask}></TaskForm>
+      <TaskForm add={addTask} length={tasks.length}></TaskForm>
     </div>
   );
 };
