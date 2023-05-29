@@ -10,6 +10,7 @@ import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import SquareColorChange from './components/pure/squareColorChange';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         {/* <SquareColorChange></SquareColorChange> */}
 
         {/* Ejemplos de uso de Formik y Yup */}
-        <LoginFormik></LoginFormik>
+        {/* <LoginFormik></LoginFormik> */}
+        <RegisterFormik></RegisterFormik>
 
       </header>
     </div>
