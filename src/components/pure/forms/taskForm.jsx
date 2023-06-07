@@ -20,45 +20,70 @@ const TaskForm = ({ add, length }) => {
   }
 
   const normalStyle = {
-    color: 'blue',
-    fontWeight: 'bold'
-  }
+    color: "blue",
+    fontWeight: "bold",
+  };
 
   const urgentStyle = {
-    color: 'yellow',
-    fontWeight: 'bold'
-  }
+    color: "yellow",
+    fontWeight: "bold",
+  };
 
   const blockingStyle = {
-    color: 'tomato',
-    fontWeight: 'bold'
-  }
+    color: "tomato",
+    fontWeight: "bold",
+  };
 
-
-
-  return <form onSubmit={addTask} className='d-flex justify-content-center align-items-center mb-4'>
-    <div className="form-outline flex-fill">
-    <input ref={nameRef} id="inputName" placeholder="Task Name" type="text" className="form-control form-control-lg" required autoFocus/>
-    <input ref={descriptionRef} id="inputDescription" placeholder="Task Description" type="text" className="form-control form-control-lg" required/>
-    <select ref={levelRef} className="form-control form-control-lg" defaultValue={LEVELS.NORMAL} id="selectLevel">
-        <option style={normalStyle} value={LEVELS.NORMAL}>
+  return (
+    <form
+      onSubmit={addTask}
+      className="d-flex justify-content-center align-items-center mb-4"
+    >
+      <div className="form-outline flex-fill">
+        <input
+          ref={nameRef}
+          id="inputName"
+          placeholder="Task Name"
+          type="text"
+          className="form-control form-control-lg"
+          required
+          autoFocus
+        />
+        <input
+          ref={descriptionRef}
+          id="inputDescription"
+          placeholder="Task Description"
+          type="text"
+          className="form-control form-control-lg"
+          required
+        />
+        <select
+          ref={levelRef}
+          className="form-control form-control-lg"
+          defaultValue={LEVELS.NORMAL}
+          id="selectLevel"
+        >
+          <option style={normalStyle} value={LEVELS.NORMAL}>
             Normal
-        </option>
-        <option style={urgentStyle} value={LEVELS.URGENT}>
+          </option>
+          <option style={urgentStyle} value={LEVELS.URGENT}>
             Urgent
-        </option>
-        <option style={blockingStyle} value={LEVELS.BLOCKING}>
+          </option>
+          <option style={blockingStyle} value={LEVELS.BLOCKING}>
             Blocking
-        </option>
-    </select>
-    <button type="submit" className="btn btn-success btn-lg ms-2">{length>0 ? 'Add New TAsk' : 'Create your First Task'}</button>
-    </div>
-  </form>;
+          </option>
+        </select>
+        <button type="submit" className="btn btn-success btn-lg ms-2">
+          {length > 0 ? "Add New TAsk" : "Create your First Task"}
+        </button>
+      </div>
+    </form>
+  );
 };
 
 TaskForm.propTypes = {
   add: PropTypes.func.isRequired,
-  length: PropTypes.number.isRequired
+  length: PropTypes.number.isRequired,
 };
 
 export default TaskForm;

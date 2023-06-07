@@ -11,6 +11,7 @@ import OptionalRender from './components/pure/optionalRender';
 import SquareColorChange from './components/pure/squareColorChange';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import TaskFormik from './components/pure/forms/taskFormik';
 
 function App() {
   return (
@@ -19,19 +20,20 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <Greeting name="Flavio"></Greeting> */}
         {/* <GreetingF name={"Flavio"}></GreetingF> */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         {/* Ejemplo de Renderizado Condicional */}
         {/* <OptionalRender></OptionalRender> */}
         {/* <GreetingStyled name="Flavio"></GreetingStyled> */}
         {/* <Clock></Clock> */}
         {/* <EntregaFuncion name='Martin' lastName={'San Jose'}></EntregaFuncion> */}
-        {/* GEestion de eventos */}
+        {/* Gestion de eventos */}
         {/* <Father></Father> */}
         {/* <SquareColorChange></SquareColorChange> */}
 
         {/* Ejemplos de uso de Formik y Yup */}
         {/* <LoginFormik></LoginFormik> */}
-        <RegisterFormik></RegisterFormik>
+        {/* <RegisterFormik></RegisterFormik> */}
+        {/* <TaskFormik></TaskFormik> */}
 
       </header>
     </div>

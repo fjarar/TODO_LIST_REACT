@@ -4,6 +4,7 @@ import { LEVELS } from "../../models/levels.enum";
 import TaskComponent from "../pure/task";
 import "../../styles/task.scss";
 import TaskForm from "../pure/forms/taskForm";
+import TaskFormik from "../pure/forms/taskFormik";
 
 const TaskListComponent = () => {
   const defaultTask1 = new Task(
@@ -136,7 +137,8 @@ const TaskListComponent = () => {
           </div>
         </div>
       </div>
-      <TaskForm add={addTask} length={tasks.length}></TaskForm>
+      {/* <TaskForm add={addTask} length={tasks.length}></TaskForm> */}
+      <TaskFormik add={addTask} length={tasks.length}></TaskFormik>
     </div>
   );
 };
