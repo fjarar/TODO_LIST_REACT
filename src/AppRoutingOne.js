@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  Navigate,
+  useNavigate,
+} from "react-router-dom";
 
 import HomePage from "./pages/home/HomePage";
 import NotFoundPage from "./pages/404/NotFoundPage";
@@ -12,21 +19,37 @@ function MultiRoute(el, ...paths) {
 }
 
 function AppRoutingOne() {
+  const logged = false;
+
+
+  /* const history = useNavigate();
+
+  const navigateTo = (path) => {
+      history(path);
+  } */
+
   return (
     <Router>
       <div>
         <aside>
           <Link to="/">|| HOME |</Link>
           <Link to="/about">| ABOUT |</Link>
-          <Link to="/faqs">| FAQs ||</Link>
-          <Link to='/nada'>| Runa Inexistente ||</Link>
+          <Link to="/faqs">| FAQs |</Link>
+          <Link to="/nada">| Runa Inexistente ||</Link>
         </aside>
 
         <main>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             {MultiRoute(<AboutPage />, "/about", "/faqs")}
-            <Route path="/profile" element={<ProfilePage />}></Route>
+            <Route
+              path="/profile"
+              element={
+                logged ? (
+                  <ProfilePage />
+                ) : (<Navigate replace to={"/"}/> && alert("test"))
+              }
+            ></Route>
             <Route path="/tasks" element={<TasksPage />}></Route>
             <Route path="/tasks/:id" element={<TaskDetailPage />}></Route>
 
