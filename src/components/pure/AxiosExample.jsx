@@ -18,7 +18,7 @@ const AxiosExample = () => {
       .catch((error) => {
         alert(`Something went wrong: ${error}`);
       });
-  }
+  };
 
   return (
     <div>
@@ -30,11 +30,14 @@ const AxiosExample = () => {
             {user.name.title} {user.name.first} {user.name.last}
           </h2>
           <h3>{user.email}</h3>
+          <div>
+            <p>Generate a new User</p>
+            <button onClick={obtainRandomUser}>Random User</button>
+          </div>
         </div>
       ) : (
         <div>
-          <p>Generate a new User</p>
-          <button onClick={obtainRandomUser}>Random User</button>
+          <p>Please generate a new user</p>
         </div>
       )}
     </div>
