@@ -13,6 +13,7 @@ import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import TaskFormik from './components/pure/forms/taskFormik';
 import FetchExample from './components/pure/fetchExample';
+import AxiosExample from './components/pure/AxiosExample';
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         {/* Gestion de eventos */}
         {/* <Father></Father> */}
         {/* <SquareColorChange></SquareColorChange> */}
-        <FetchExample></FetchExample>
+        {/* <FetchExample></FetchExample> */}
+        <AxiosExample></AxiosExample>
         {/* Ejemplos de uso de Formik y Yup */}
         {/* <LoginFormik></LoginFormik> */}
         {/* <RegisterFormik></RegisterFormik> */}
