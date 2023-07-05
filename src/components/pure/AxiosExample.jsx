@@ -23,23 +23,19 @@ const AxiosExample = () => {
   return (
     <div>
       <h1>Axios Example</h1>
-      {user != null ? (
+      {user !== null ? (
         <div>
           <img alt="avatar" src={user.picture.large}></img>
           <h2>
             {user.name.title} {user.name.first} {user.name.last}
           </h2>
-          <h3>{user.email}</h3>
-          <div>
+          <h3>{user.email}</h3>          
+        </div>
+      ) : null}
+      <div>
             <p>Generate a new User</p>
             <button onClick={obtainRandomUser}>Random User</button>
           </div>
-        </div>
-      ) : (
-        <div>
-          <p>Please generate a new user</p>
-        </div>
-      )}
     </div>
   );
 };
